@@ -11,4 +11,9 @@ Secondly you can download 3 types of decks from your selected content: Basic (th
 ## Basic and Reversed
 Basic and Reversed cards are basically the same, they just switch around the order of their informations a bit. Basic cards are intendet to allow you to study srs-stages e.g. apprentice or burned items. Reversed cards are intendet to allow you to improve your active vocabulary (as WaniKani only does passiv, i.e. reading not speaking).
 
-![bas_rev](https://github.com/user-attachments/assets/898f5025-b0a3-4830-9c64-fc6d6ca7f9c4)
+![bas_rev](https://github.com/user-attachments/assets/70487057-ab5c-4320-ae31-9444890491cd)
+
+## Writing
+Writing cards are intendet to allow you to study handwriting radicals and kanji of your current WaniKani level. They feature a interactable animation on the typical square grid used for writing practise. Note these cards need an internet connection as they grab their animation data online!
+
+![wri](https://github.com/user-attachments/assets/df4efb35-04a9-4d64-8ee2-fed5581e14e5)
