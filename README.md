@@ -4,7 +4,6 @@ This project is part of my [personal website](http://philsfun.com) (currently no
 ## Features
 Firstly you can simply view content from any level or srs-stage (e.g. your apprentice items). The view can be filtered by type (radical, kanji, vocabulary) and provides clickable cards linking to their corresponding WaniKani site.
 
-https://github.com/user-attachments/assets/69c8bef7-3884-4a78-9ccf-b78f895e75c8
 <p align="center"><img src="https://github.com/user-attachments/assets/69c8bef7-3884-4a78-9ccf-b78f895e75c8" alt="view-demo"/></p>
 
 Secondly you can download 3 types of decks from your selected content: Basic (the same as WaniKani), Reversed (instead of 木 -> 'tree' you go 'tree' -> 木), Writing (practise handwriting radicals and kanjis). The Anki cards contain all immediatly usefull information like meanings, readings, mnemonics, but also link back to the WaniKani site for further info.
