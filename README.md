@@ -16,4 +16,4 @@ Basic and Reversed cards are basically the same, they just switch around the ord
 ## Writing
 Writing cards are intendet to allow you to study handwriting radicals and kanji of your current WaniKani level. They feature a interactable animation on the typical square grid used for writing practise. Note these cards need an internet connection as they grab their animation data online!
 
-![wri](https://github.com/user-attachments/assets/df4efb35-04a9-4d64-8ee2-fed5581e14e5)
+<p align="center">![wri](https://github.com/user-attachments/assets/df4efb35-04a9-4d64-8ee2-fed5581e14e5)</p>
