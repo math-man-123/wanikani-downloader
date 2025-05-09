@@ -1,0 +1,182 @@
+/* main style */
+.card {
+    font-family: arial;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+.main-row {
+    margin-block: 30px;
+}
+
+.main-row:not(.stack),
+.sub-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.sub-row {
+    margin-block: 20px;
+}
+
+.subject {
+    z-index: 10;
+    user-select: none;
+    font-size: 45px;
+    width: fit-content;
+    padding: 20px;
+    margin-block: 20px;
+    margin-inline: auto;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: 25ms ease-in-out;
+    cursor: pointer;
+    text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.subject:hover {
+    transform: scale(1.05);
+}
+
+.subject.radical {
+    background: #00a6f9;
+}
+
+.subject.vocabulary {
+    background: #9f00ef;
+}
+
+.subject.kanji {
+    background: #fa00a6;
+}
+
+span.radical {
+	color: #00a6f9;
+}
+
+span.vocabulary {
+	color: #9f00ef;
+}
+
+span.kanji {
+	color: #fa00a6;
+}
+
+.main-row .primary:not(:empty) {
+    margin-right: 15px;
+    font-size: 30px;
+}
+
+.other {
+    opacity: 0.6;
+}
+
+.mnemonic {
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.info {
+    margin-right: 30px;
+    font-variant: small-caps;
+    opacity: 0.6;
+}
+
+/* links style */
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.links .kanji {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    transition: 25ms ease-in-out;
+    cursor: pointer;
+}
+
+.links .kanji:hover {
+    transform: scale(1.1);
+}
+
+.links .character {
+    font-size: 25px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.links .meaning {
+    font-size: 10px;
+    opacity: 0.6;
+}
+
+hr {
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+.url {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.url:hover {
+    transform: scale(1.15);
+}
+
+/* handwritten kanji style */
+#dmak {
+    margin-bottom: 10px;
+    background: #f2f0ef;
+    width: fit-content;
+    margin-inline: auto;
+    padding: 6px;
+    padding-bottom: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    min-height: 109px;
+    min-width: 109px;
+    margin-inline: auto;
+    margin-block: 20px;
+}
+
+#settings {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    width: fit-content;
+    gap: 20px;
+}
+
+#settings label {
+    display: flex;
+    align-items: center;
+    line-height: 0.5;
+    gap: 5px;
+    font-variant: small-caps;
+    font-size: 17px;
+    opacity: 0.8;
+}

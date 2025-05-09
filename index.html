@@ -1,0 +1,119 @@
+<!-- WaniKani Downloader - A project to create Anki cards from WaniKani content. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT IMPORT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+
+    <!-- GENANKI IMPORT -->
+    <script src="https://cdn.jsdelivr.net/gh/krmanik/genanki-js/dist/genanki.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/sql-wasm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <!-- CSS, JS, TITLE -->
+    <link rel="stylesheet" href="/css/framework.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="wanikani.js"></script>
+    <title>PhilsFun &#x2022; WaniKani Downloader</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="header" class="wrapper">
+        <div class="content">
+            <!-- LOGO -->
+            <span id="logo">
+                <a href="">
+                    <h3><span class="fancy">&#960;</span>PhilsFun</h3>
+                </a>
+            </span>
+
+            <!-- NAVIGATION -->
+            <span id="navigation">
+                <ul>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Links</a></li>
+                    <li><a href="">Downloads</a></li>
+                    <li><a href="">Other</a></li>
+                </ul>
+            </span>
+
+            <!-- ACTIONS -->
+            <span id="actions">
+                <button><a href="">Contact</a></button>
+            </span>
+        </div>
+    </div>
+
+    <!-- PAGE -->
+    <div id="page" class="wrapper">
+        <div class="content">
+
+            <!-- API INPUT SECTION -->
+            <div class="section stack">
+                <span class="step">Please enter your API-Token here.</span>
+                <input type="text" id="api-token" placeholder="┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴" />
+                <span class="hint">
+                    You can find it on WaniKani > Account > Settings >
+                    API-Tokens. If you don't have one yet, simply generate a
+                    new one by clicking on 'Generate a new token'. You don't
+                    need to give it any extra permissions (read-only is fine).
+                </span>
+            </div>
+
+            <!-- CONTENT SECTION -->
+            <div class="section stack">
+                <span class="step">View or download your content here.</span>
+                <div id="input">
+
+                    <!-- SUBJECT SETTINGS -->
+                    <span class="input-group">
+                        <select id="content"><script src="select.js"></script></select>
+                        <span class="stack">
+                            <span class="checkboxes">
+                                <label><input type="checkbox" name="Radicals" id="radical" checked />Radicals</label>
+                                <label><input type="checkbox" name="Kanjis" id="kanji" checked />Kanjis</label>
+                                <label><input type="checkbox" name="Vocabulary" id="vocabulary" checked />Vocabulary</label>
+                            </span>
+                            <span class="hint">Select which subjects you want to view.</span>
+                        </span>
+                    </span>
+
+                    <!-- DOWNLOAD SETTINGS -->
+                    <span class="input-group">
+                        <button id="download"><span>Download</span></button>
+                        <span class="stack">
+                            <span class="checkboxes">
+                                <label><input type="checkbox" name="Basic" id="basic" checked />Basic</label>
+                                <label><input type="checkbox" name="Reversed" id="reversed" />Reversed</label>
+                                <label><input type="checkbox" name="Writing" id="writing" />Writing</label>
+                            </span>
+                            <span class="hint">Select which decks you want to download.</span>
+                        </span>
+                    </span>
+
+                </div>
+
+                <!-- ERROR MESSAGE -->
+                <div id="error" class="hidden">
+                    <img src="other/cat-spin.gif" />
+                    <span id="msg" class="hint"></span>
+                </div>
+
+                <!-- SUBJECT GRID -->
+                <div id="container"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

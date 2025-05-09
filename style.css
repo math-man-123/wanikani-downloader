@@ -1,0 +1,357 @@
+#page {
+  font-family: 'Noto Sans JP';
+}
+
+/* subject container style */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 50px;
+  overflow: visible;
+  padding: 5px;
+  width: calc(100% - 10px);
+}
+
+.subject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  flex: 1 1 55px;
+  padding: 15px;
+  padding-bottom: 18px;
+  border-radius: 10px;
+  transition: ease 25ms;
+  user-select: none;
+}
+
+.subject:hover {
+  transform: scale(1.025);
+}
+
+.subject.radical {
+  background: #00a6f9;
+}
+
+.subject.vocabulary,
+.subject.kana_vocabulary {
+  background: #9f00ef;
+}
+
+.subject.kanji {
+  background: #fa00a6;
+}
+
+.subject.last-row {
+  max-width: max-content;
+}
+
+.subject .characters {
+  font-size: 45px;
+  line-height: 1;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.subject.radical .characters {
+  margin-inline: 8px;
+}
+
+.subject .information {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.subject .information span:not(:last-child)::after {
+  content: '・';
+  line-height: 1;
+  margin: 0 3px;
+}
+
+/* section style */
+.section {
+  margin-block: 50px;
+}
+
+.step {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* api token style */
+#api-token {
+  width: 370px;
+  text-align: center;
+  color: #d14 !important;
+  font-family: 'Noto Sans JP' !important;
+  font-weight: 600;
+}
+
+#api-token::placeholder {
+  font-weight: 400;
+  opacity: 0.4;
+}
+
+.hint {
+  font-size: 10px;
+  opacity: 0.8;
+  max-width: 370px;
+  text-align: justify;
+  letter-spacing: 0.3px;
+}
+
+/* input elements style */
+#content {
+  font-family: 'Noto Sans JP' !important;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: var(--col-bg-high);
+  color: var(--col-text-low);
+  border-radius: 5px;
+  max-height: 100px;
+  cursor: pointer;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  line-height: 1;
+}
+
+#content:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#content:focus {
+  outline: none;
+}
+
+#content::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+#content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.checkboxes {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 7px;
+}
+
+label,
+label > input {
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+#download > span {
+  font-family: 'Noto Sans JP' !important;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+#input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input-group .stack {
+  gap: 0px;
+}
+
+.input-group .hint {
+  margin-top: 1px;
+}
+
+/* error style */
+#error {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+#error img {
+  margin-bottom: 20px;
+  width: 200px !important;
+  padding: 0px !important;
+  border: none !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+}
+
+#error .hint {
+  font-size: 18px;
+  color: #d14;
+  opacity: 1;
+  font-weight: 600;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* generic style */
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* changes for tablet design */
+@media (max-width: 768px) {
+  .step {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  #api-token {
+    width: 270px;
+  }
+
+  .hint {
+    max-width: 270px;
+    font-size: 8px;
+  }
+
+  .section {
+    margin-block: 30px;
+  }
+
+  #input label,
+  #input select,
+  #input button span {
+    font-size: 12px;
+  }
+
+  #subject-container {
+    margin-top: 30px;
+  }
+
+  .subject {
+    padding: 10px;
+    padding-bottom: 13px;
+  }
+
+  .subject .information {
+    font-size: 13px;
+  }
+
+  .subject .characters {
+    font-size: 37px;
+  }
+
+  .subject .information span:not(:last-child)::after {
+    margin: 0 2px;
+  }
+
+  #error {
+    width: 400px;
+  }
+
+  #error .hint {
+    max-width: 400px;
+  }
+
+  #error img {
+    width: 150px !important;
+    margin-bottom: 15px;
+  }
+
+  #error .hint {
+    font-size: 14px;
+  }
+}
+
+/* changes for phone design */
+@media (max-width: 480px) {
+  .step {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+
+  #api-token {
+    width: 220px;
+  }
+
+  .hint {
+    max-width: 220px;
+    font-size: 8px;
+  }
+
+
+  #input label,
+  #input select,
+  #input button span {
+    font-size: 10px;
+  }
+
+  .subject .information {
+    font-size: 11px;
+  }
+
+  .subject .characters {
+    font-size: 33px;
+  }
+
+  .subject .information span:not(:last-child)::after {
+    margin: 0 1px;
+  }
+
+  #error {
+    width: 300px;
+  }
+
+  #error img {
+    width: 120px !important;
+    margin-bottom: 10px;
+  }
+
+  #error .hint {
+    font-size: 11px;
+  }
+}
+
+/* changes for mini design */
+@media (max-width: 350px) {
+  .input-group {
+    flex-direction: column;
+  }
+}

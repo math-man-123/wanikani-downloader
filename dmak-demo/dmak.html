@@ -1,0 +1,49 @@
+<!-- Minimal dmak demo. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dmak demo</title>
+
+    <script src="raphael.min.js"></script>
+    <script src="dmak.min.js"></script>
+</head>
+
+<body>
+    <div style="height: 109px; margin-bottom: 10px" id="kanji" onclick="resetKanji()"></div>
+    <label style="display: flex; align-items: center">
+        <input type="checkbox" id="order" onchange="toggleOrder()" />
+        show stroke order
+    </label>
+
+    <script>
+        const SETTINGS = {
+            element: 'kanji',
+            uri: 'http://kanjivg.tagaini.net/kanjivg/kanji/',
+            step: 0.01,
+            stroke: { order: { visible: false } },
+        };
+        const CHAR = '日本語';
+
+        let KANJI = new Dmak(CHAR, SETTINGS);
+
+        function resetKanji() {
+            document.getElementById('kanji').innerHTML = '';
+            KANJI = new Dmak(CHAR, SETTINGS);
+        }
+
+        function toggleOrder() {
+            console.log(document.getElementById('order').checked);
+
+            if (document.getElementById('order').checked)
+                SETTINGS.stroke.order.visible = true;
+            else SETTINGS.stroke.order.visible = false;
+
+            resetKanji();
+        }
+    </script>
+</body>
+
+</html>
