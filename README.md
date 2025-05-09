@@ -7,3 +7,8 @@ Firstly you can simply view content from any level or srs-stage (e.g. your appre
 ![img01](https://github.com/user-attachments/assets/69c8bef7-3884-4a78-9ccf-b78f895e75c8)
 
 Secondly you can download 3 types of decks from your selected content: Basic (the same as WaniKani), Reversed (instead of 木 -> 'tree' you go 'tree' -> 木), Writing (practise handwriting radicals and kanjis). The Anki cards contain all immediatly usefull information like meanings, readings, mnemonics, but also link back to the WaniKani site for further info.
+
+## Basic and Reversed
+Basic and Reversed cards are basically the same, they just switch around the order of their informations a bit. Basic cards are intendet to allow you to study srs-stages e.g. apprentice or burned items. Reversed cards are intendet to allow you to improve your active vocabulary (as WaniKani only does passiv, i.e. reading not speaking).
+
+![bas_rev](https://github.com/user-attachments/assets/898f5025-b0a3-4830-9c64-fc6d6ca7f9c4)
