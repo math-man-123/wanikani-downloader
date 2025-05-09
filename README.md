@@ -19,5 +19,5 @@ Writing cards are intendet to allow you to study handwriting radicals and kanji 
 ![wri](https://github.com/user-attachments/assets/df4efb35-04a9-4d64-8ee2-fed5581e14e5)
 
 <p align="center">
-  <img src="[IMAGE_URL](https://github.com/user-attachments/assets/df4efb35-04a9-4d64-8ee2-fed5581e14e5)" alt="writing-demo" />
+  <img src="https://github.com/user-attachments/assets/df4efb35-04a9-4d64-8ee2-fed5581e14e5" alt="writing-demo" />
 </p>
