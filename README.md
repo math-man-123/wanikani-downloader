@@ -22,4 +22,5 @@ Writing cards are intended to allow you to study handwriting radicals and kanji 
 As with most things, this project is not perfect. Please feel free to tell me if you encounter any bad bugs. I will try my best to fix them (maybe). For now there are only two issues known (which are so minor that I don’t want to deal with them):
 
 * A very small amount of items on WaniKani do not use an actual character but rather a custom graphic. Those items will only display a ‘?’ as their character. Similarly some writing cards might display an empty animation as the database that provides them might not know that item.
+
 * The interface state on writing cards is visually not saved between Anki cards, even though the actual settings stay saved. This has to do with how Anki renders cards and doesn’t really matter too much to be honest.
