@@ -1,1 +1,2 @@
-This project is part of my personal website philsfun.com (currently not populated). It is intendet as a way to improve your WaniKani study by allowing you to download WaniKani content as Anki cards.
+## Introduction
+This project is part of my personal website philsfun.com (currently not populated). It is intendet as a way to improve your WaniKani study by allowing you to download WaniKani content as Anki cards. The project is a continuation of my previous project [wanikani-recent-mistakes](https://github.com/math-man-123/wanikani-recent-mistakes) even though that exact feature is currently still missing.
