@@ -3,6 +3,15 @@
 const SELECT = document.getElementById('content');
 
 
+// Create a new optgroup for miscellaneous options
+let group = document.createElement('optgroup');
+group.label = 'MISCELLANEOUS'; 
+
+// Add recent mistakes option to the optgroup
+group.appendChild(new Option('Recent Mistakes', 'mistake'));
+SELECT.appendChild(group);
+
+
 // Define SRS stages with corresponding values and labels
 const STAGES = [
     { value: 'srs1,2,3,4', label: 'Apprentice' },
@@ -13,7 +22,7 @@ const STAGES = [
 ];
 
 // Create a new optgroup for SRS stages
-let group = document.createElement('optgroup');
+group = document.createElement('optgroup');
 group.label = 'SRS-STAGES';
 
 // Add an option for each SRS stage to the optgroup
