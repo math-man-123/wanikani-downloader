@@ -63,3 +63,19 @@ export function capFirst(str) {
     if (typeof str != 'string') return;
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
+
+// returns current time delta hours ago (UTC)
+export function getHoursAgo(delta) {
+    let date = new Date();
+    date.setHours(date.getHours() - delta);
+    
+    return date.toISOString();
+}
+
+// checks if given review is a mistake or not
+export function isMistake(review) {
+    let meaning_mistake = review.data.meaning_current_streak <= 1;
+    let reading_mistake = review.data.reading_current_streak <= 1;
+
+    return meaning_mistake || reading_mistake;
+}
