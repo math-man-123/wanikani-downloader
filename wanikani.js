@@ -153,12 +153,12 @@ async function loadSubjects() {
         if (/mistake/.test(content)) {
             let reviews = await apiRequest(
                 'review_statistics', 
-                { updated_after: getHoursAgo(24) });
+                { updated_after: UTIL.getHoursAgo(24) });
             
             // first filter for reviews that are mistakes
             // then only keep the subject ids of those
             let mistakes = reviews
-                .filter((review) => isMistake(review))
+                .filter((review) => UTIL.isMistake(review))
                 .map((review) => review.data.subject_id);
             
             return { ids: mistakes.join(',') };
@@ -177,22 +177,6 @@ async function loadSubjects() {
             return { ids: assignments.map((el) => el.data.subject_id) };
         }
     }
-}
-
-// returns current time delta hours ago (UTC)
-function getHoursAgo(delta) {
-    let date = new Date();
-    date.setHours(date.getHours() - delta);
-    
-    return date.toISOString();
-}
-
-// checks if given review is a mistake or not
-function isMistake(review) {
-    let meaning_mistake = review.data.meaning_current_streak <= 1;
-    let reading_mistake = review.data.reading_current_streak <= 1;
-
-    return meaning_mistake || reading_mistake;
 }
 
 // sorts subject data in ascending order as defined by UTIL.ORDER array
